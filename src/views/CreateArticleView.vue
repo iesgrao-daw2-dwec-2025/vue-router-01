@@ -4,13 +4,15 @@ import { useRoute, useRouter } from "vue-router";
 const router = useRouter();
 const route = useRoute();
 
-console.log("router: ", router);
-console.log("route: ", route);
+// console.log("router: ", router);
+// console.log("route: ", route);
 </script>
 <template>
   <h1>Crear artículo</h1>
   <div class="article__container">
-    <div class="article__title"></div>
+    <div class="article__title">
+      <v-text-field label="Título"></v-text-field>
+    </div>
     <div class="article__description"></div>
     <div class="article__price"></div>
   </div>
