@@ -10,26 +10,40 @@ const description = ref("");
 const price = ref(0);
 </script>
 <template>
-  <h1>Crear artículo</h1>
-  <div class="article__container">
-    <div class="article__title">
-      <v-text-field label="Título" v-model="title"></v-text-field>
-    </div>
-    <div class="article__description">
-      <v-textarea label="Descripción" v-model="description"></v-textarea>
-    </div>
-    <div class="article__price">
-      <v-number-input control-variant="split" v-model="price"></v-number-input>
-    </div>
-  </div>
+  <header>
+    <v-container>
+      <v-col>
+        <h2>Crear artículo</h2>
+      </v-col>
+    </v-container>
+  </header>
+  <main>
+    <v-container>
+      <v-col>
+        <!-- form inputs -->
+        <v-container>
+          <v-col>
+            <v-text-field label="Título" v-model="title"></v-text-field>
+            <v-textarea label="Descripción" v-model="description"></v-textarea>
+            <v-number-input
+              control-variant="split"
+              v-model="price"
+            ></v-number-input>
+          </v-col>
+        </v-container>
 
-  <button @click="console.log({ title, description, price })">Crear</button>
-  <button @click="$router.push({ name: 'home' })">Volver</button>
+        <!-- form actions -->
+        <v-container>
+          <v-row>
+            <v-btn @click="console.log({ title, description, price })">
+              Crear
+            </v-btn>
+            <v-btn @click=""> Limpiar </v-btn>
+          </v-row>
+        </v-container>
+      </v-col>
+    </v-container>
+  </main>
 </template>
 
-<style scoped>
-.article__container {
-  margin: 20px;
-  max-width: 300px;
-}
-</style>
+<style scoped></style>
