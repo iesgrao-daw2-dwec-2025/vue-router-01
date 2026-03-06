@@ -1,5 +1,12 @@
+<script setup>
+defineProps({
+  articles: Array,
+});
+</script>
+
 <template>
   <v-container>
+    <v-col>{{ articles }}</v-col>
     <v-col>
       <header>
         <v-container>

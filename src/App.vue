@@ -29,7 +29,7 @@ onMounted(async () => {
         <h1>Artículos App</h1>
       </header>
       <main>
-        <router-view />
+        <router-view :articles="articles" />
       </main>
       <footer>
         <v-container>

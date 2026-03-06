@@ -22,6 +22,7 @@ const router = createRouter({
       path: "/list-articles",
       name: "list-articles",
       component: ListArticlesView,
+      props: true,
     },
   ],
 });
